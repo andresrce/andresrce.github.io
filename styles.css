@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.proyecto img {
+    width: 150px;
+    height: 150px;
+    margin-right: 1rem;
+}
+
+.proyecto-info h3 {
+    margin: 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#contacto .social-links {
+    margin-bottom: 20px;
+}
+
+#contacto .social-links a {
+    margin: 0 10px;
+}
+
+#contacto .social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#contacto form input, #contacto form textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+#contacto form button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#networkCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10; /* Esto asegura que el texto esté sobre el canvas */
+}
+
+#inicio .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+#inicio .centered .social-links {
+    margin-top: 20px; /* Ajusta este valor según sea necesario */
+}
+
+#inicio .centered .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+#inicio .centered .social-links img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
