@@ -6,6 +6,13 @@ body, html {
     line-height: 1.6;
 }
 
+.centered .icono-encabezado {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción del ícono */
+    display: block; /* Hace que el ícono sea un bloque para centrarlo */
+    margin: 0 auto 30px; /* Centra el ícono y añade espacio debajo */
+}
+
 header {
     background: #333;
     color: #fff;
