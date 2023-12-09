@@ -13,13 +13,42 @@ header {
     text-align: center;
 }
 
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#networkCanvas {
+    position: relative; /* Asegura que .centered se posicione en relación con este elemento */
+    width: 100%;
+    height: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%; /* Ajusta estas propiedades según sea necesario para posicionar correctamente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10; /* Esto asegura que el texto esté sobre el canvas */
+}
+
+.centered .social-links img {
+    width: 30px; /* Limita el tamaño de los iconos */
+    height: auto; /* Mantiene la proporción de aspecto de los iconos */
+}
+
+
 header nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -30,24 +59,42 @@ header nav ul li a {
 
 section {
     padding: 2rem;
-    text-align: center;
+}
+
+#sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#sobre-mi p {
+    flex: 1;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+#sobre-mi img {
+    width: 50%; /* Ajustar según la imagen */
+    height: auto;
+}
+
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten debajo uno del otro */
+    justify-content: flex-start;
 }
 
 .proyecto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+    width: 22%; /* Ajusta el ancho para que quepan 4 en una línea */
+    margin: 1%; /* Espacio alrededor de cada proyecto */
+    text-align: left; /* Alinea el contenido a la izquierda */
 }
 
 .proyecto img {
-    width: 150px;
-    height: 150px;
-    margin-right: 1rem;
-}
-
-.proyecto-info h3 {
-    margin: 0;
+    width: 100%; /* Ajusta la imagen para llenar el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
 }
 
 footer {
@@ -57,81 +104,86 @@ footer {
     padding: 1rem 0;
 }
 
-#contacto .social-links {
-    margin-bottom: 20px;
-}
-
-#contacto .social-links a {
-    margin: 0 10px;
-}
-
-#contacto .social-links img {
-    width: 30px;
-    height: 30px;
-}
-
-#contacto form {
+#sobre-mi .sobre-mi-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    flex-direction: row; /* Asegura una disposición horizontal */
+    align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Evita que los elementos se ajusten debajo uno del otro */
 }
 
-#contacto form input, #contacto form textarea {
-    width: 90%;
-    max-width: 400px;
+#sobre-mi .sobre-mi-texto {
+    width: 45%; /* Ajusta el ancho */
+    padding: 15px;
+}
+
+#sobre-mi .sobre-mi-imagen {
+    width: 45%; /* Ajusta el ancho */
+    padding: 15px;
+    margin-top: 85px; /* Ajusta este valor según sea necesario para alinear con el texto */
+}
+
+#sobre-mi .sobre-mi-imagen img {
+    width: 100%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+}
+
+.descarga-cv {
+    text-align: center; /* Centra el botón en la página */
+    margin-top: 20px; /* Añade un poco de espacio por encima del botón */
+}
+
+.boton-cv {
+    background-color: #add8e6; /* Color celeste */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+}
+
+.boton-cv:hover {
+    background-color: #9acfe7; /* Color un poco más oscuro al pasar el ratón por encima */
+}
+
+/* ... (resto del CSS) ... */
+
+.detalle-proyecto .contenido-proyecto {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.detalle-proyecto .imagen-proyecto,
+.detalle-proyecto .descripcion-proyecto {
+    width: 48%; /* Ajusta el ancho según sea necesario */
     padding: 10px;
 }
 
-#contacto form button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-#inicio {
-    position: relative;
+.detalle-proyecto .imagen-proyecto img {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#networkCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10; /* Esto asegura que el texto esté sobre el canvas */
-}
-
-#inicio .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10;
-}
-
-#inicio .centered .social-links {
-    margin-top: 20px; /* Ajusta este valor según sea necesario */
-}
-
-#inicio .centered .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-#inicio .centered .social-links img {
-    width: 30px; /* Ajusta el tamaño según sea necesario */
     height: auto;
+}
+
+.boton-directorio {
+    display: inline-block; /* Para que el botón se comporte como un elemento en línea */
+    margin-top: 20px; /* Espacio sobre el botón */
+}
+
+.boton-directorio img {
+    width: 30px; /* Ajusta según el tamaño deseado del icono */
+    height: auto;
+}
+
+.tableau-viz {
+    text-align: center;
+    max-width: 500px; /* Ajusta según la anchura deseada */
+    margin: auto; /* Centra el contenedor en la página */
+    height: auto; /* Altura automática basada en el contenido */
+}
+
+.tableau-viz object {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: auto; /* Altura automática */
 }
 

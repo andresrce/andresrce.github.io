@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>London Bike Rides - Detalles del Proyecto</title>
+</head>
+<body>
+    <header>
+        <!-- Enlace para volver a la página principal -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido detallado del proyecto -->
+    <section class="detalle-proyecto">
+        <h2>London Bike Rides</h2>
+        <div class="contenido-proyecto">
+            <div class="imagen-proyecto">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/c3/1d/96/the-london-bicycle-tour.jpg?w=1200&h=1200&s=1" alt="Proyecto 1">
+            </div>
+            <div class="descripcion-proyecto">
+                <p>Todos los créditos corresponden a Mo Chen, del canal de YouTube 'Data With Mo'.</p>
+                <p>En este proyecto, realizamos una meticulosa limpieza y curación de un extenso conjunto de datos de recorridos en bicicleta en Londres. Nuestro enfoque se centra en desarrollar una visualización interactiva utilizando Tableau, la cual no solo presenta el número total de recorridos durante un período seleccionado, sino que también integra factores ambientales clave como las condiciones del viento y la temperatura. Esta herramienta dinámica cuenta con un marco de tiempo ajustable, permitiendo a los usuarios seleccionar períodos específicos y visualizar instantáneamente las estadísticas de recorridos correspondientes y las características climáticas asociadas.</p>
+                <p>El desarrollo del proyecto se realizó en varias etapas clave. Inicialmente, se llevó a cabo una limpieza y preparación de datos utilizando Python, ajustando ciertos parámetros para optimizar su posterior uso en Tableau. Seguidamente, a través de Python, procedimos a descargar un archivo en formato Excel, el cual fue esencial para nuestro trabajo en Tableau Public. En esta plataforma, creamos un Dashboard dinámico que incorpora todos los detalles mencionados anteriormente.</p>
+                
+                <!-- Botón para acceder al directorio del proyecto -->
+                <a href="https://github.com/andresrce/London-Bike-Rides" class="boton-directorio">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Ver Proyecto"> <!-- Asegúrate de tener el icono adecuado -->
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor de Tableau con clase para estilizar -->
+    <div class='tableauPlaceholder' id='viz1702089189030' class="tableau-viz">
+        <div class='tableauPlaceholder' id='viz1702089189030' style='position: relative'><noscript><a href='#'><img alt='Dashboard London Bike Rides ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardLondonBikeRides&#47;DashboardLondonBikeRides&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DashboardLondonBikeRides&#47;DashboardLondonBikeRides' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardLondonBikeRides&#47;DashboardLondonBikeRides&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1702089189030');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    
+    <footer>
+        <p>© 2023 - Andrés Crooker Estivales. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
