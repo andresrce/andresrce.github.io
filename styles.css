@@ -194,3 +194,68 @@ footer {
     height: auto; /* Altura automática */
 }
 
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* Espacio aún más reducido entre tarjetas */
+}
+
+.proyecto {
+    width: 15%; /* Ancho mucho más reducido */
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 8px;
+    box-shadow: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.proyecto:hover {
+    transform: translateY(-2px); /* Movimiento sutil al pasar el ratón */
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3px;
+}
+
+.proyecto h3 {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para el título */
+    margin-bottom: 2px;
+}
+
+.proyecto p {
+    font-size: 0.8em; /* Tamaño de fuente muy pequeño para el texto */
+}
+
+/* Responsive Design para móviles y tablets */
+@media screen and (max-width: 768px) {
+    .proyecto {
+        width: 30%; /* Ancho más grande en dispositivos más pequeños */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .proyecto {
+        width: 45%; /* Ancho aún más grande para pantallas muy pequeñas */
+    }
+}
+
+.contenedor-imagen-cuadrada {
+    width: 100px;  /* Ajusta el tamaño según tus necesidades */
+    height: 100px; /* Asegúrate de que el ancho y el alto sean iguales */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el tamaño del contenedor */
+}
+
+.contenedor-imagen-cuadrada a {
+    display: block; /* Hace que el enlace llene el contenedor */
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-imagen-cuadrada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio, recortándose si es necesario */
+}
