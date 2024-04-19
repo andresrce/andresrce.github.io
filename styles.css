@@ -265,4 +265,5 @@ footer {
 .chart_a img {
     width: 100%; /* Asegura que la imagen cubra todo el espacio disponible */
     height: auto; /* Mantiene la proporción de la imagen */
+
 }
