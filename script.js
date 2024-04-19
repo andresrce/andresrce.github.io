@@ -5,8 +5,15 @@ let mouseEffectRadius = 100; // Radio de efecto del mouse
 let mouseForce = 15; // Fuerza de reacción al mouse
 
 function setup() {
-    let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent('networkCanvas');
+
+    // Calcula el ancho y alto, pero no permite que excedan el máximo definido
+    const canvasWidth = windowWidth-(100);
+    const canvasHeight = windowHeight;
+
+    // Crea el canvas con el ancho y alto ajustados
+    let canvas = createCanvas(canvasWidth, canvasHeight);
+    canvas.parent('networkCanvas'); // Asegúrate de que el ID 'networkCanvas' sea correcto
+
 
     // Crear nodos con velocidades iniciales aleatorias
     for (let i = 0; i < totalNodes; i++) {
@@ -65,6 +72,9 @@ function drawLinesBetweenNodes() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    const canvasWidth = min(windowWidth, maxWidth);
+    const canvasHeight = min(windowHeight, maxHeight);
+    resizeCanvas(canvasWidth, canvasHeight);
 }
+
 

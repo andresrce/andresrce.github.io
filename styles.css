@@ -241,3 +241,28 @@ footer {
         width: 45%; /* Ancho aún más grande para pantallas muy pequeñas */
     }
 }
+
+.container_a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    width: 80%; /* Ajusta esto según tus necesidades */
+    height: 80%; /* Ajusta esto según tus necesidades */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Opcional */
+}
+
+.chart_a {
+    background-color: #f9f9f9; /* Color de fondo de cada gráfico */
+    border: 1px solid #ccc; /* Borde de los gráficos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Altura de cada gráfico */
+    overflow: hidden; /* Previene desbordamiento de imágenes */
+}
+
+.chart_a img {
+    width: 100%; /* Asegura que la imagen cubra todo el espacio disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
