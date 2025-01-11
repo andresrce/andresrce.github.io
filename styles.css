@@ -83,11 +83,6 @@ section {
     text-align: justify;
 }
 
-#sobre-mi img {
-    width: 25%; /* Ajustar según la imagen */
-    height: auto;
-}
-
 .contenedor-proyectos {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se ajusten debajo uno del otro */
@@ -126,14 +121,8 @@ footer {
     padding: 15px;
 }
 
-#sobre-mi .sobre-mi-imagen {
-    width: 45%; /* Ajusta el ancho */
-    padding: 15px;
-    margin-top: 85px; /* Ajusta este valor según sea necesario para alinear con el texto */
-}
-
 #sobre-mi .sobre-mi-imagen img {
-    width: 100%; /* Ajusta el tamaño de la imagen */
+    width: 40%; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción */
 }
 
