@@ -131,7 +131,7 @@ footer {
 }
 
 #sobre-mi .sobre-mi-imagen img {
-    width: 600px; /* Ajusta el tamaño de las imágenes */
+    width: 400px; /* Ajusta el tamaño de las imágenes */
     height: auto; /* Mantiene las proporciones */
     border-radius: 10px; /* Bordes redondeados */
 }
