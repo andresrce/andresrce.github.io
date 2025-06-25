@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #1e1e2f;
+      --cell-bg: #28293d;
+      --cell-hover: #3b3c59;
+      --color-x: #e07a5f;
+      --color-o: #3d405b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 100vh; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Poppins', sans-serif; color: #fff;
+    }
+    h1 { margin-bottom: 20px; font-weight: 600; letter-spacing: 2px; }
+    #board {
+      display: grid; grid-template: repeat(3, 120px) / repeat(3, 120px); gap: 15px;
+    }
+    .cell {
+      background: var(--cell-bg); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; cursor: pointer; user-select: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cell:hover { background: var(--cell-hover); }
+    .cell:active { transform: scale(0.95); }
+    .cell.X { color: var(--color-x); }
+    .cell.O { color: var(--color-o); }
+    #reset {
+      margin-top: 20px; padding: 10px 20px; background: var(--cell-bg);
+      border: none; border-radius: 8px; cursor: pointer;
+      font-size: 1rem; color: #fff; transition: background 0.3s;
+    }
+    #reset:hover { background: var(--cell-hover); }
+  </style>
+</head>
+<body>
+  <h1>Tic-Tac-Toe</h1>
+  <div id="board"></div>
+  <button id="reset">Reiniciar</button>
+  <script>
+    const boardEl = document.getElementById('board');
+    const resetBtn = document.getElementById('reset');
+    let turn = 'X', state = Array(9).fill(null);
+
+    function init() {
+      boardEl.innerHTML = '';
+      state.fill(null);
+      turn = 'X';
+      for (let i = 0; i < 9; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.addEventListener('click', () => play(i, cell));
+        boardEl.appendChild(cell);
+      }
+    }
+
+    function play(i, cell) {
+      if (state[i]) return;
+      state[i] = turn;
+      cell.textContent = turn;
+      cell.classList.add(turn);
+      if (checkWin()) {
+        setTimeout(() => alert(`${turn} gana!`), 100);
+        highlightWin();
+      }
+      turn = turn === 'X' ? 'O' : 'X';
+    }
+
+    function checkWin() {
+      const combos = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+      ];
+      return combos.some(c => c.every(i => state[i] === turn));
+    }
+
+    function highlightWin() {
+      const combos = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+      ];
+      combos.forEach(c => {
+        if (c.every(i => state[i] === turn)) {
+          c.forEach(i => boardEl.children[i].style.boxShadow = '0 0 15px 5px rgba(224,122,95,0.6)');
+        }
+      });
+    }
+
+    resetBtn.addEventListener('click', init);
+
+    init();
+  </script>
+</body>
+</html>

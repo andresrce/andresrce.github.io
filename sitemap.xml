@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 1) Home / Index -->
   <url>
-    <loc>https://andresrce.github.io/index.html</loc>
+    <loc>https://andresrce.github.io/</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
