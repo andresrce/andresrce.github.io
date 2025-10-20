@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Data Analysis Air Traffic Chile (JAC)</title>
+</head>
+<body>
+    <header>
+        <!-- Enlace para volver a la página principal -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido detallado del proyecto -->
+    <section class="detalle-proyecto">
+        <h1>Análisis de Medallas: Juegos Panamericanos Santiago 2023</h1>
+        <div class="contenido-proyecto">
+            <div class="imagen-proyecto">
+                <h2>Resumen del Proyecto</h2>
+                <p>Este proyecto analiza la distribución de medallas en los Juegos Panamericanos Santiago 2023, destacando el desempeño de los países participantes, con especial atención a las delegaciones sudamericanas. A través de técnicas de scraping, limpieza y visualización de datos en Python, se identificaron patrones clave y se crearon gráficos interactivos.</p>
+                <h2>Metodología</h2>
+                <ul>
+                    <li><strong>Recolección de Datos:</strong> Datos extraídos de Wikipedia utilizando BeautifulSoup.</li>
+                    <li><strong>Preparación de Datos:</strong> Limpieza y transformación de tablas con pandas.</li>
+                    <li><strong>Visualización:</strong> Gráficos de barras y mapas interactivos con plotly para explorar medallas totales y por tipo.</li>
+                    <li><strong>Integración Web:</strong> Generación de archivos HTML interactivos y dashboards con Dash y Streamlit.</li>
+                </ul>
+                <h2>Resultados:</h2>
+                <ul>
+                    <li><strong>Distribución de Medallas:</strong> Estados Unidos lidera con 286 medallas, seguido por Brasil (205) y México (142). Y Chile, como anfitrión, obtuvo 79 medallas, destacándose en Sudamérica.</li>
+                    <li><strong>Mapas Interactivos:</strong> Los gráficos muestran la intensidad del desempeño por país, con detalles interactivos sobre medallas de oro, plata y bronce.</li>
+                    <li><strong>Tendencias Clave:</strong> Los países con mayor población y recursos dominan las medallas, mientras que delegaciones más pequeñas concentran sus logros en disciplinas específicas</li>
+                </ul>
+                <h2>Herramientas</h2>
+                <ul>
+                    <li>Análisis: pandas, numpy.</li>
+                    <li>Visualización: matplotlib, plotly.</li>
+                    <li>Scraping: BeautifulSoup.</li>
+                    <li>Web: Dash, Streamlit, HTML interactivo.</li>
+                </ul>
+                <h2>Conclusión</h2>
+                <p>El proyecto destaca la utilidad de combinar análisis de datos con visualizaciones interactivas para comunicar resultados de manera efectiva. Es una base para explorar ediciones pasadas o aplicar técnicas similares en futuros eventos.</p>
+            </div>
+            <div class="descripcion-proyecto">
+                <iframe src="grafico_medallas_stgo2023.html" width="100%" height="300px" frameborder="0"></iframe>
+                <a href="https://github.com/andresrce/Juegos-Panamericanos-2023" class="boton-directorio">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Ver Proyecto"> <!-- Asegúrate de tener el icono adecuado -->
+                </a>
+            </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 - Andrés Crooker Estivales. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
