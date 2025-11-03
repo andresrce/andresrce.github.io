@@ -271,3 +271,134 @@ footer {
     height: auto; /* Mantiene la proporción de la imagen */
 
 }
+
+
+.proj-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 48px 0 12px;
+}
+.proj-pager a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border: 1px solid #223045;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #0b172a0d;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.proj-pager a:hover {
+  transform: translateY(-2px);
+  background: #0b172a1a;
+  border-color: #2e3f5c;
+}
+.proj-pager .label { font-size: 12px; opacity: .8; }
+.proj-pager .title { font-weight: 600; margin-top: 2px; }
+.proj-pager .prev { justify-content: flex-start; gap: 10px; }
+.proj-pager .next { justify-content: flex-end; gap: 10px; text-align: right; }
+@media (max-width: 640px) {
+  .proj-pager { grid-template-columns: 1fr; }
+  .proj-pager .next { text-align: left; justify-content: flex-start; }
+}
+
+/* Formulario (si no lo tenías ya) */
+.contact-section {
+  margin: 64px 0 24px;
+  padding: 32px;
+  border: 1px solid #223045;
+  border-radius: 16px;
+  background: #0b172a0d;
+}
+.contact-section h2 { margin-top: 0; }
+.contact-form { display: grid; gap: 16px; max-width: 640px; }
+.field { display: grid; gap: 6px; }
+.field input, .field textarea {
+  width: 100%; padding: 12px 14px; border-radius: 10px;
+  border: 1px solid #223045; background: #0b172a08; color: inherit;
+}
+.field input:focus, .field textarea:focus { outline: 2px solid #2e3f5c; }
+button[type="submit"] {
+  align-self: start; padding: 12px 18px; border: 0; border-radius: 10px;
+  background: #183264; color: #fff; cursor: pointer; font-weight: 600;
+}
+button[type="submit"]:hover { filter: brightness(1.05); }
+.hp { position: absolute; left: -9999px; }
+.form-status { margin-top: 6px; font-size: .95rem; opacity: .95; }
+.form-status[data-type="success"] { color: #18a957; }
+.form-status[data-type="error"] { color: #e25555; }
+
+/* Modal */
+.modal[hidden] { display: none !important; }
+.modal {
+  position: fixed; inset: 0; z-index: 9999;
+}
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+  opacity: 0; animation: modalFade .18s ease forwards;
+}
+.modal-card {
+  position: relative; z-index: 1;
+  width: min(92vw, 520px);
+  margin: 10vh auto 0;
+  background: #0b172a;
+  color: #fff;
+  border: 1px solid #223045;
+  border-radius: 16px;
+  padding: 24px 22px 18px;
+  box-shadow: 0 20px 70px rgba(0,0,0,.35);
+  transform: translateY(10px) scale(.98);
+  opacity: 0; animation: modalEnter .2s ease forwards;
+}
+.modal-card h3 { margin: 0 0 8px; }
+.modal-card p { opacity: .95; }
+.modal-actions { margin-top: 16px; display: flex; justify-content: flex-end; gap: 10px; }
+.modal-ok, .modal-close {
+  padding: 10px 14px; border-radius: 10px; border: 1px solid #2e3f5c;
+  background: #0b172a0d; color: #fff; cursor: pointer; font-weight: 600;
+}
+.modal-ok:hover, .modal-close:hover { background: #0b172a1f; }
+.modal-close {
+  position: absolute; right: 8px; top: 8px; border-radius: 50%;
+  width: 36px; height: 36px; font-size: 20px; line-height: 1;
+  display: grid; place-items: center;
+}
+
+@keyframes modalEnter { to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes modalFade  { to { opacity: 1; } }
+
+/* Evitar scroll del body cuando el modal está abierto */
+body.modal-open { overflow: hidden; }
+
+/* Caja centrada */
+.contact-section {
+  width: 100%;
+  max-width: 720px;          /* ajusta a 640/768 según gusto */
+  margin: 64px auto 24px;    /* ← centra horizontalmente */
+  padding: 32px;
+  border: 1px solid #223045;
+  border-radius: 16px;
+  background: #0b172a0d;
+}
+
+/* Centrar el contenido del formulario dentro de la caja */
+.contact-form {
+  display: grid;
+  gap: 16px;
+  max-width: 560px;          /* que el formulario no “pegue” a los bordes */
+  margin: 0 auto;            /* ← centra el form dentro de la sección */
+}
+
+/* Opcional: centrar el botón con el contenido */
+.contact-form button[type="submit"] {
+  justify-self: start;       /* cambia a center si lo quieres centrado */
+}
+
+/* Si quieres el botón centrado completamente, usa esto: */
+/* .contact-form button[type="submit"] { justify-self: center; } */
+
+

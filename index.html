@@ -197,6 +197,52 @@
         </div>
     </section>
 
+    <!-- === Sección: Contáctame === -->
+    <section id="contacto" class="contact-section" aria-labelledby="contacto-title">
+    <h2 id="contacto-title">Contáctame</h2>
+    <p>¿Tienes una idea, proyecto o propuesta? Escríbeme y conversemos.</p>
+
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwpwdqyb" method="POST" novalidate>
+        <div class="field">
+        <label for="c-nombre">Nombre</label>
+        <input id="c-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+        <label for="c-mensaje">Mensaje</label>
+        <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuéntame brevemente tu necesidad" required></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam (no completar) -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+
+        <!-- Opcionales de Formspree -->
+        <input type="hidden" name="_subject" value="Nuevo contacto desde andresrce.github.io">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" id="c-submit">Enviar</button>
+        <p class="form-status" id="form-status" aria-live="polite" hidden>Enviando…</p>
+    </form>
+    </section>
+
+    <!-- === Modal de éxito de Sección Contáctame === -->
+    <div id="thanks-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="thanks-title" aria-describedby="thanks-desc" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card" role="document">
+        <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">×</button>
+        <h3 id="thanks-title">¡Gracias por tu mensaje!</h3>
+        <p id="thanks-desc">Te responderé a la brevedad. Revisa tu correo por si necesitas confirmar el envío.</p>
+        <div class="modal-actions">
+        <button class="modal-ok" type="button" data-close="true">Aceptar</button>
+        </div>
+    </div>
+    </div>
+
     <section aria-labelledby="mapa-sitio">
         <h2 id="mapa-sitio">Mapa rápido del sitio</h2>
         <ul>
@@ -214,10 +260,11 @@
         </ul>
     </section>
 
-
     <footer>
         <p>© 2025 - Andrés Crooker Estivales. Todos los derechos reservados.</p>
     </footer>
+    
+    <script src="contact.js" defer></script>
     <script src="script.js"></script>
 </body>
 
