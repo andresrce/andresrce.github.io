@@ -10,8 +10,7 @@ const PROJECTS = [
   { title: "Pokemon Data",                  url: "pokemon-data.html" },
   { title: "Panamericanos 2023",            url: "juegos-panamericanos.html" },
   { title: "Air Traffic Chile (JAC)",       url: "JAC.html" },
-  { title: "Accidentes Santiago",           url: "accidentes-stgo.html" },
-  { title: "Valor Casas Usadas RM",         url: "valor-casas-RM.html" }
+  { title: "Accidentes Valparaiso",           url: "accidentes-valpo.html" }
 ];
 
 /* 2) Utilidad para comparar rutas de forma robusta */
