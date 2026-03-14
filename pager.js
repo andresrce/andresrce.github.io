@@ -2,15 +2,15 @@
 
 /* 1) Orden maestro de proyectos (ajústalo a tus archivos reales) */
 const PROJECTS = [
-  { title: "London Bike Rides",             url: "london-bike-rides.html" },
-  { title: "Top 200 Spotify",               url: "spotify.html" },
-  { title: "The Walking Dead Popularity",   url: "the-walking-dead-popularity.html" },
-  { title: "Gasto en I+D Chile 2020",       url: "gasto-i+d.html" },
-  { title: "Walmart Sales",                 url: "walmart-sales.html" },
-  { title: "Pokemon Data",                  url: "pokemon-data.html" },
-  { title: "Panamericanos 2023",            url: "juegos-panamericanos.html" },
-  { title: "Air Traffic Chile (JAC)",       url: "JAC.html" },
-  { title: "Accidentes Valparaiso",           url: "accidentes-valpo.html" }
+  { title: "London Bike Rides", url: "london-bike-rides.html" },
+  { title: "Top 200 Spotify", url: "spotify.html" },
+  { title: "The Walking Dead Popularity", url: "the-walking-dead-popularity.html" },
+  { title: "Gasto en I+D Chile 2020", url: "gasto-i+d.html" },
+  { title: "Walmart Sales", url: "walmart-sales.html" },
+  { title: "Pokemon Data", url: "pokemon-data.html" },
+  { title: "Panamericanos 2023", url: "juegos-panamericanos.html" },
+  { title: "Air Traffic Chile (JAC)", url: "JAC.html" },
+  { title: "Accidentes Valparaiso", url: "accidentes-valpo.html" }
 ];
 
 /* 2) Utilidad para comparar rutas de forma robusta */
@@ -18,7 +18,7 @@ function fileFromPath(pathname) {
   try {
     const parts = pathname.split("/");
     return "/" + (parts[parts.length - 1] || "");
-  } catch { return pathname; }
+  } catch (error) { return pathname; }
 }
 
 /* 3) Render del pager + <link rel="prev|next"> en <head> */
@@ -63,8 +63,18 @@ function renderPager() {
 
   // Señales SEO en <head>
   const head = document.head;
-  if (prev) { const lp = document.createElement("link"); lp.rel = "prev"; lp.href = prev.url; head.appendChild(lp); }
-  if (next) { const ln = document.createElement("link"); ln.rel = "next"; ln.href = next.url; head.appendChild(ln); }
+  if (prev) {
+    const lp = document.createElement("link");
+    lp.rel = "prev";
+    lp.href = prev.url;
+    head.appendChild(lp);
+  }
+  if (next) {
+    const ln = document.createElement("link");
+    ln.rel = "next";
+    ln.href = next.url;
+    head.appendChild(ln);
+  }
 }
 
 /* 4) Inicialización */

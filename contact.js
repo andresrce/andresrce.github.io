@@ -75,7 +75,7 @@
 
     var fd = new FormData(form);
     if (btn) btn.disabled = true;
-    setStatus('Enviando…', 'info');
+    setStatus('Enviando...', 'info');
 
     // fetch (ES5: presente en navegadores modernos; si necesitas IE, habría que usar XHR)
     fetch(action, {
@@ -122,4 +122,3 @@
     }
   };
 })();
-

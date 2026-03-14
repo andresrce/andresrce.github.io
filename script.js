@@ -1,55 +1,79 @@
 let nodes = [];
-let totalNodes = 100;
-let maxDistance = 100; // Máxima distancia para conectar nodos
-let mouseEffectRadius = 100; // Radio de efecto del mouse
-let mouseForce = 15; // Fuerza de reacción al mouse
+let totalNodes = 70;
+const maxDistance = 120;
+const mouseEffectRadius = 120;
+const mouseForce = 12;
+let networkHost = null;
 
 function setup() {
+    networkHost = document.getElementById('networkCanvas');
 
-    // Calcula el ancho y alto, pero no permite que excedan el máximo definido
-    const canvasWidth = windowWidth-(100);
-    const canvasHeight = windowHeight;
-
-    // Crea el canvas con el ancho y alto ajustados
-    let canvas = createCanvas(canvasWidth, canvasHeight);
-    canvas.parent('networkCanvas'); // Asegúrate de que el ID 'networkCanvas' sea correcto
-
-
-    // Crear nodos con velocidades iniciales aleatorias
-    for (let i = 0; i < totalNodes; i++) {
-        let node = {
-            position: createVector(random(width), random(height)),
-            velocity: p5.Vector.random2D().mult(random(1, 3))
-        };
-        nodes.push(node);
+    if (!networkHost) {
+        noCanvas();
+        return;
     }
+
+    const canvas = createCanvas(getCanvasWidth(), getCanvasHeight());
+    canvas.parent('networkCanvas');
+    canvas.attribute('aria-hidden', 'true');
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        noLoop();
+        background(245, 247, 251);
+        return;
+    }
+
+    updateNodeCount();
+    createNodes();
 }
 
 function draw() {
-    background(255);
+    if (!networkHost) {
+        return;
+    }
 
-    nodes.forEach(node => {
-        // Dibujar nodo
-        fill(0);
+    clear();
+    background(245, 247, 251);
+
+    for (const node of nodes) {
+        fill(15, 23, 42, 165);
         noStroke();
-        ellipse(node.position.x, node.position.y, 6, 6);
+        ellipse(node.position.x, node.position.y, 4, 4);
 
-        // Actualizar posición del nodo basado en su velocidad
         node.position.add(node.velocity);
-
-        // Mantener los nodos dentro del canvas
         wrapAround(node.position);
 
-        // Reacción al mouse
-        let mouse = createVector(mouseX, mouseY);
+        const mouse = createVector(mouseX, mouseY);
         if (dist(node.position.x, node.position.y, mouse.x, mouse.y) < mouseEffectRadius) {
-            let flee = p5.Vector.sub(node.position, mouse).setMag(mouseForce);
+            const flee = p5.Vector.sub(node.position, mouse).setMag(mouseForce);
             node.position.add(flee);
         }
-    });
+    }
 
-    // Dibujar líneas entre nodos cercanos
     drawLinesBetweenNodes();
+}
+
+function getCanvasWidth() {
+    return networkHost ? networkHost.offsetWidth : windowWidth;
+}
+
+function getCanvasHeight() {
+    const minHeight = Math.max(window.innerHeight - 84, 520);
+    return networkHost ? Math.max(networkHost.offsetHeight, minHeight) : minHeight;
+}
+
+function updateNodeCount() {
+    totalNodes = window.innerWidth < 640 ? 28 : window.innerWidth < 980 ? 46 : 70;
+}
+
+function createNodes() {
+    nodes = [];
+    for (let i = 0; i < totalNodes; i += 1) {
+        nodes.push({
+            position: createVector(random(width), random(height)),
+            velocity: p5.Vector.random2D().mult(random(0.5, 1.8))
+        });
+    }
 }
 
 function wrapAround(position) {
@@ -60,11 +84,17 @@ function wrapAround(position) {
 }
 
 function drawLinesBetweenNodes() {
-    for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-            let d = dist(nodes[i].position.x, nodes[i].position.y, nodes[j].position.x, nodes[j].position.y);
-            if (d < maxDistance) {
-                stroke(0, 50);
+    for (let i = 0; i < nodes.length; i += 1) {
+        for (let j = i + 1; j < nodes.length; j += 1) {
+            const distance = dist(
+                nodes[i].position.x,
+                nodes[i].position.y,
+                nodes[j].position.x,
+                nodes[j].position.y
+            );
+
+            if (distance < maxDistance) {
+                stroke(15, 91, 216, map(distance, 0, maxDistance, 55, 8));
                 line(nodes[i].position.x, nodes[i].position.y, nodes[j].position.x, nodes[j].position.y);
             }
         }
@@ -72,9 +102,12 @@ function drawLinesBetweenNodes() {
 }
 
 function windowResized() {
-    const canvasWidth = min(windowWidth, maxWidth);
-    const canvasHeight = min(windowHeight, maxHeight);
-    resizeCanvas(canvasWidth, canvasHeight);
-}
+    if (!networkHost) {
+        return;
+    }
 
+    updateNodeCount();
+    resizeCanvas(getCanvasWidth(), getCanvasHeight());
+    createNodes();
+}
 

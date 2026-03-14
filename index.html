@@ -1,271 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Librerías -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
-
-  <!-- Básicos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Portafolio Digital Andrés Crooker – Digital Specialist en Sodimac</title>
-  <meta name="description" content="Portafolio de Andrés Crooker Estivales, Digital Specialist en Sodimac Chile e Ingeniero Civil Industrial (PUCV). Proyectos de análisis de datos, automatización de reporting, marketing digital y performance.">
+  <title>Andres Crooker | Portafolio de Marketing Digital y Analisis de Datos</title>
+  <meta name="description" content="Portafolio de Andres Crooker Estivales, Digital Specialist en Sodimac Chile. Proyectos de analisis de datos, automatizacion, forecasting, BI y marketing digital.">
   <link rel="canonical" href="https://andresrce.github.io/">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="author" content="Andres Crooker Estivales">
 
-  <!-- Idiomas -->
   <link rel="alternate" hreflang="es" href="https://andresrce.github.io/">
   <link rel="alternate" hreflang="x-default" href="https://andresrce.github.io/">
 
-  <!-- Performance hints -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="styles.css" as="style">
 
-  <!-- Estilos e íconos -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="https://www.iconninja.com/files/934/215/600/bleach-alt-icon.PNG">
-  <link rel="apple-touch-icon" href="/images/index-cover.png">
-  <meta name="theme-color" content="#0b172a">
+  <link rel="icon" type="image/png" href="images/index-cover.png">
+  <link rel="apple-touch-icon" href="images/index-cover.png">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Portafolio Andrés Crooker">
-  <meta property="og:title" content="Portafolio de Andrés Crooker – Marketing Digital & Data">
-  <meta property="og:description" content="Proyectos de análisis de datos, automatización de reporting y marketing digital (Google Ads, Meta, Python, Tableau, Prophet).">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Portafolio Andres Crooker">
+  <meta property="og:title" content="Andres Crooker | Portafolio de Marketing Digital y Analisis de Datos">
+  <meta property="og:description" content="Proyectos de analisis de datos, automatizacion, reporting, BI y marketing digital orientado a resultados.">
   <meta property="og:url" content="https://andresrce.github.io/">
   <meta property="og:image" content="https://andresrce.github.io/images/index-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portafolio de Andrés Crooker – Marketing Digital & Data">
-  <meta name="twitter:description" content="Proyectos de análisis de datos, automatización de reporting y marketing digital (Google Ads, Meta, Python, Tableau, Prophet).">
+  <meta name="twitter:title" content="Andres Crooker | Portafolio de Marketing Digital y Analisis de Datos">
+  <meta name="twitter:description" content="Portafolio con proyectos de analisis de datos, automatizacion y marketing digital.">
   <meta name="twitter:image" content="https://andresrce.github.io/images/index-cover.png">
-  <!-- <meta name="twitter:site" content="@tu_usuario">  Opcional -->
 
-  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
+        "@id": "https://andresrce.github.io/#website",
         "url": "https://andresrce.github.io/",
-        "name": "Portafolio Andrés Crooker",
+        "name": "Portafolio Andres Crooker",
         "inLanguage": "es",
-        "description": "Portafolio de datos y marketing digital.",
-        "publisher": { "@id": "https://andresrce.github.io/#person" }
+        "description": "Portafolio de analisis de datos, automatizacion y marketing digital.",
+        "publisher": {
+          "@id": "https://andresrce.github.io/#person"
+        }
       },
       {
         "@type": "Person",
         "@id": "https://andresrce.github.io/#person",
-        "name": "Andrés Crooker Estivales",
+        "name": "Andres Crooker Estivales",
         "url": "https://andresrce.github.io/",
         "jobTitle": "Digital Specialist",
-        "worksFor": { "@type": "Organization", "name": "Sodimac Chile" },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sodimac Chile"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Pontificia Universidad Catolica de Valparaiso"
+        },
         "sameAs": [
-          "https://www.linkedin.com/in/andres-crooker-estivales/"
-          /* agrega otras redes si quieres */
+          "https://www.linkedin.com/in/andres-crooker-estivales/",
+          "https://twitter.com/andrescrooker",
+          "https://medium.com/@andres.crooker.e",
+          "https://www.youtube.com/@andresrce"
         ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://andresrce.github.io/#portfolio",
+        "url": "https://andresrce.github.io/",
+        "name": "Proyectos destacados de Andres Crooker",
+        "isPartOf": {
+          "@id": "https://andresrce.github.io/#website"
+        }
       }
     ]
   }
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-    <section id="inicio">
-        <div id="networkCanvas"></div> 
-        <div class="centered">
-            <h1>Portafolio Digital de Andrés Crooker – Digital Specialist en Marketing Digital</h1>
-            <p>Digital Specialist en Sodimac Chile</p>
-            <p>Ingeniero Civil Industrial de la Pontificia Universidad Católica de Valparaíso</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/andres-crooker-estivales/" target="_blank"><img src="https://logoeps.com/wp-content/uploads/2014/06/49408-linkedin-logo-icon-vector-icon-vector-eps.png" alt="LinkedIn"></a>
-                <a href="https://twitter.com/andrescrooker" target="_blank"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-twitter-ronde-noire.png" alt="Twitter"></a>
-                <a href="https://medium.com/@andres.crooker.e" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-medium-icon-2177-thumb.png" alt="Medium"></a>
-                <a href="https://www.youtube.com/@andresrce" target="_blank"><img src="https://images.vexels.com/content/137425/preview/youtube-icon-logo-719479.png" alt="Youtube"></a>
-            </div>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Principal">
+      <a class="brand" href="#inicio">Andres Crooker</a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mi</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div id="networkCanvas" aria-hidden="true"></div>
+      <div class="centered hero-card">
+        <p class="eyebrow">Marketing digital, datos y automatizacion</p>
+        <h1 id="hero-title">Portafolio digital de Andres Crooker</h1>
+        <p class="hero-copy">Digital Specialist en Sodimac Chile e Ingeniero Civil Industrial de la Pontificia Universidad Catolica de Valparaiso.</p>
+        <p class="hero-copy">Este sitio resume proyectos de analisis, reporting, forecasting, BI y growth marketing construidos con Python, SQL, Tableau, Plotly y herramientas de performance.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#proyectos">Ver proyectos</a>
+          <a class="button-secondary" href="CV.pdf" download>Descargar CV</a>
         </div>
+        <ul class="social-links" aria-label="Redes y perfiles">
+          <li><a href="https://www.linkedin.com/in/andres-crooker-estivales/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://twitter.com/andrescrooker" target="_blank" rel="noopener noreferrer">X</a></li>
+          <li><a href="https://medium.com/@andres.crooker.e" target="_blank" rel="noopener noreferrer">Medium</a></li>
+          <li><a href="https://www.youtube.com/@andresrce" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="sobre-mi">
-        <div class="sobre-mi-container">
-            <div class="sobre-mi-texto">
-                <h2>Sobre Mí</h2>
-                <p>Soy Digital Specialist en Sodimac Chile, anteriormente tuve el cargo de Analista de Marketing Digital en JetSMART Airlines, titulado de Ingeniería Civil Industrial, con interés en tecnología y datos. Tengo experiencia en automatización y proyectos de reporting, así como en estrategias de marketing digital y análisis de datos. Me apasiona trabajar con tecnología y datos para desarrollar soluciones innovadoras y efectivas que impulsen el crecimiento de las organizaciones.
-                <p>Me destaco por mi capacidad para liderar proyectos y colaborar en equipos multidisciplinarios, aplicando enfoques orientados a la mejora continua. Además, tengo un fuerte interés en la sostenibilidad, el desarrollo económico y la implementación de estrategias que generen impacto positivo en las empresas y la sociedad.</p>
-            </div>
-            <div class="sobre-mi-imagen">
-                <img src="https://clgchile.cl/wp-content/uploads/2016/06/Sodimac-BRANDBOOK-Oct-2014.jpg" alt="Logo Sodimac">
-                <img src="https://www.pucv.cl/uuaa/site/artic/20221129/imag/foto_0000000320221129110654/CASA-CENTRAL-NOCTURNA-SICELE.gif" alt="PUCV">
-                <img src="https://cdn.dribbble.com/users/2451824/screenshots/9857075/media/02ea3bd710bfda81ad8a29ffcaf26148.gif" alt="GIF JetSMART Airlines">
-                <div class="descarga-cv">
-                    <a href="CV.pdf" class="boton-cv" download>Download CV (PDF)</a>
-                </div>
-            </div>
-            
+    <section id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="sobre-mi-container">
+        <div class="sobre-mi-texto">
+          <p class="section-kicker">Perfil</p>
+          <h2 id="sobre-mi-title">Experiencia en performance, automatizacion y analisis</h2>
+          <p>Soy Digital Specialist en Sodimac Chile y anteriormente me desempene como Analista de Marketing Digital en JetSMART Airlines. Mi foco esta en conectar datos, negocio y ejecucion para mejorar decisiones, escalar reporting y construir estrategias medibles.</p>
+          <p>Trabajo con analitica, dashboards, automatizacion de procesos y modelos de analisis que ayudan a detectar oportunidades de crecimiento. Me interesa especialmente la interseccion entre tecnologia, eficiencia operativa y comunicacion clara de resultados.</p>
+          <p>Tambien me motiva desarrollar proyectos con impacto real, desde estudios geoespaciales y series de tiempo hasta visualizaciones interactivas publicadas para compartir hallazgos de forma simple y util.</p>
         </div>
-
-    </section>
-    
-    <section id="proyectos">
-        <h2>Proyectos Destacados</h2>
-        <div class="contenedor-proyectos">
-            <div class="proyecto">
-                <h3>London Bike Rides</h3>
-                <a href="london-bike-rides.html">
-                    <img src="https://static.vecteezy.com/system/resources/previews/005/073/166/original/bicycle-cycling-road-bike-minimalist-logo-design-inspiration-vector.jpg" alt="Bike">
-                </a>
-                <p>Procesamiento de datos de viajes en bicicleta en Londres con Python y visualización en Tableau.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Top 200 Spotify</h3>
-                <a href="spotify.html">
-                    <img src="https://i.pinimg.com/originals/ff/41/3b/ff413b1c1c71de8e4d27da66c7e3f0c7.png" alt="Spotify">
-                </a>
-                <p>Procesamiento, estudio y visualización de top 200 canciones de Spotify del año 2017 al 2023 con Python.</p>
-            </div>
-            <div class="proyecto">
-                <h3>TWD Popularity</h3>
-                <a href="the-walking-dead-popularity.html">
-                    <img src="https://i.pinimg.com/736x/37/57/76/375776f6debbb1dcbd7f4ba120d9418a.jpg" alt="TWD Comic">
-                </a>
-                <p>Procesamiento, estudio, visualización y predicción de popularidad de capitulos de TWD con Python.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Cost of I+D Chile 2020</h3>
-                <a href="gasto-i+d.html">
-                    <img src="https://thumbs.dreamstime.com/b/mikrochip-cpu-ikone-der-linearen-art-prozessor-linienelement-f%C3%BCr-websites-und-mobile-computer-chip-im-flachen-design-197786631.jpg" alt="I+D">
-                </a>
-                <p>Procesamiento en Excel y visualización con Tableau de datos de Innovación en Chile.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Walmart Sales</h3>
-                <a href="walmart-sales.html">
-                    <img src="https://brandingstyleguides.com/wp-content/guidelines/2025/01/walmart-web.jpg" alt="Walmart Logo">
-                </a>
-                <p>Procesamiento de datos de ventas, productos y clientes en tiendas Walmart con SQL.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Pokemon Data</h3>
-                <a href="pokemon-data.html">
-                    <img src="https://pbs.twimg.com/media/FpA-gGYWAAEZXmF.jpg" alt="Pikachu">
-                </a>
-                <p>Procesamiento de datos sobre Pokémon y sus combates, de manera de entender las dinamicas presentes del Juego de cartas, Gameboy, Anime o Manga.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Panamericanos Santiago 2023</h3>
-                <a href="juegos-panamericanos.html">
-                    <img src="https://pbs.twimg.com/profile_images/1534364950264676353/8tkbkH_V_400x400.jpg" alt="Juegos Panamericanos Stgo">
-                </a>
-                <p>Scraping de datos desde Wikipedia y análisis en Python.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Air Traffic Chile (JAC)</h3>
-                <a href="JAC.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/JAClogo.png" alt="JAC Chile">
-                </a>
-                <p>Procesamiento y forecast de datos históricos de pasajeros y movimientos aéreos en aeropuertos chilenos con Python, Prophet y Plotly.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Accidentes Valparaíso</h3>
-                <a href="accidentes-valpo.html">
-                    <img src="https://fineartlatinoamerica.com/cdn/shop/products/5DnaoohT76.jpg?v=1718213217&width=1346" alt="Mapa ilustrado Valparaíso">
-                </a>
-                <p>Análisis geoespacial y temporal de accidentes automovilísticos en Valparaíso con Python, GeoPandas y Folium.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Valor Casas Usadas RM</h3>
-                <a href="valor-casas-RM.html">
-                    <img src="https://helvecia.com/wp-content/uploads/2020/11/cropped-helvecia-inicio-08-1.jpg" alt="Stgo">
-                </a>
-                <p>Modelado hedónico de precios de viviendas usadas en la Región Metropolitana con Python, scikit-learn y visualizaciones en Tableau.</p>
-            </div>
-            <!-- Para crear otro proyecto copia la estrctura de arriba -->
-        </div>
+        <aside class="sobre-mi-imagen" aria-label="Trayectoria profesional y academica">
+          <img src="https://clgchile.cl/wp-content/uploads/2016/06/Sodimac-BRANDBOOK-Oct-2014.jpg" alt="Marca Sodimac" loading="lazy" decoding="async">
+          <img src="https://www.pucv.cl/uuaa/site/artic/20221129/imag/foto_0000000320221129110654/CASA-CENTRAL-NOCTURNA-SICELE.gif" alt="Casa Central de la Pontificia Universidad Catolica de Valparaiso" loading="lazy" decoding="async">
+          <img src="https://cdn.dribbble.com/users/2451824/screenshots/9857075/media/02ea3bd710bfda81ad8a29ffcaf26148.gif" alt="Referencia visual a JetSMART Airlines" loading="lazy" decoding="async">
+        </aside>
+      </div>
     </section>
 
-    <!-- === Sección: Contáctame === -->
+    <section id="proyectos" aria-labelledby="proyectos-title">
+      <div class="section-heading">
+        <p class="section-kicker">Portfolio</p>
+        <h2 id="proyectos-title">Proyectos destacados</h2>
+        <p>Casos publicados con enfoque en analisis de datos, visualizacion, negocio y automatizacion.</p>
+      </div>
+
+      <div class="contenedor-proyectos">
+        <article class="proyecto">
+          <a href="london-bike-rides.html" class="project-link">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/073/166/original/bicycle-cycling-road-bike-minimalist-logo-design-inspiration-vector.jpg" alt="Proyecto London Bike Rides" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Python + Tableau</p>
+              <h3>London Bike Rides</h3>
+              <p>Procesamiento y visualizacion de viajes en bicicleta en Londres con variables climaticas y filtros temporales.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="spotify.html" class="project-link">
+            <img src="https://i.pinimg.com/originals/ff/41/3b/ff413b1c1c71de8e4d27da66c7e3f0c7.png" alt="Proyecto Top 200 Spotify" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Python + EDA</p>
+              <h3>Top 200 Spotify</h3>
+              <p>Exploracion de canciones top 200 entre 2017 y 2023 para estudiar tendencias, artistas y comportamiento temporal.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="the-walking-dead-popularity.html" class="project-link">
+            <img src="https://i.pinimg.com/736x/37/57/76/375776f6debbb1dcbd7f4ba120d9418a.jpg" alt="Proyecto The Walking Dead Popularity" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Forecasting</p>
+              <h3>TWD Popularity</h3>
+              <p>Analisis y prediccion de popularidad de capitulos de The Walking Dead a partir de datos historicos.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="gasto-i+d.html" class="project-link">
+            <img src="https://thumbs.dreamstime.com/b/mikrochip-cpu-ikone-der-linearen-art-prozessor-linienelement-f%C3%BCr-websites-und-mobile-computer-chip-im-flachen-design-197786631.jpg" alt="Proyecto Gasto en Investigacion y Desarrollo en Chile" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Excel + Tableau</p>
+              <h3>Gasto en I+D Chile</h3>
+              <p>Visualizacion de la inversion en investigacion y desarrollo en Chile con foco en financiamiento y distribucion regional.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="walmart-sales.html" class="project-link">
+            <img src="https://brandingstyleguides.com/wp-content/guidelines/2025/01/walmart-web.jpg" alt="Proyecto Walmart Sales" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">SQL</p>
+              <h3>Walmart Sales</h3>
+              <p>Analisis de ventas, clientes y productos para identificar patrones comerciales y oportunidades de negocio.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="pokemon-data.html" class="project-link">
+            <img src="https://pbs.twimg.com/media/FpA-gGYWAAEZXmF.jpg" alt="Proyecto Pokemon Data" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Python + Modelado</p>
+              <h3>Pokemon Data</h3>
+              <p>Analisis de especies, estadisticas y combates para entender patrones competitivos dentro del universo Pokemon.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="juegos-panamericanos.html" class="project-link">
+            <img src="https://pbs.twimg.com/profile_images/1534364950264676353/8tkbkH_V_400x400.jpg" alt="Proyecto Panamericanos Santiago 2023" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Scraping + Plotly</p>
+              <h3>Panamericanos Santiago 2023</h3>
+              <p>Scraping y analisis del medallero para explorar distribucion de resultados y desempeno regional.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="JAC.html" class="project-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/JAClogo.png" alt="Proyecto Air Traffic Chile JAC" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Forecasting + Aviacion</p>
+              <h3>Air Traffic Chile (JAC)</h3>
+              <p>Analisis de pasajeros, operaciones y rutas aereas en Chile con foco en record historico y dinamica del mercado.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="proyecto">
+          <a href="accidentes-valpo.html" class="project-link">
+            <img src="https://fineartlatinoamerica.com/cdn/shop/products/5DnaoohT76.jpg?v=1718213217&width=1346" alt="Proyecto Accidentes en Valparaiso" loading="lazy" decoding="async">
+            <div class="project-body">
+              <p class="project-tag">Geoanalisis</p>
+              <h3>Accidentes Valparaiso</h3>
+              <p>Analisis geoespacial y temporal de accidentes de transito en Valparaiso con Python, GeoPandas y Folium.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
     <section id="contacto" class="contact-section" aria-labelledby="contacto-title">
-    <h2 id="contacto-title">Contáctame</h2>
-    <p>¿Tienes una idea, proyecto o propuesta? Escríbeme y conversemos.</p>
+      <div class="section-heading section-heading-left">
+        <p class="section-kicker">Contacto</p>
+        <h2 id="contacto-title">Conversemos</h2>
+        <p>Si tienes una idea, una propuesta o quieres revisar algun proyecto en detalle, puedes escribirme aqui.</p>
+      </div>
 
-    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwpwdqyb" method="POST" novalidate>
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwpwdqyb" method="POST" novalidate>
         <div class="field">
-        <label for="c-nombre">Nombre</label>
-        <input id="c-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+          <label for="c-nombre">Nombre</label>
+          <input id="c-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
         </div>
 
         <div class="field">
-        <label for="c-email">Email</label>
-        <input id="c-email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
         </div>
 
         <div class="field">
-        <label for="c-mensaje">Mensaje</label>
-        <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuéntame brevemente tu necesidad" required></textarea>
+          <label for="c-mensaje">Mensaje</label>
+          <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuentame brevemente tu necesidad" required></textarea>
         </div>
 
-        <!-- Honeypot anti-spam (no completar) -->
         <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-
-        <!-- Opcionales de Formspree -->
         <input type="hidden" name="_subject" value="Nuevo contacto desde andresrce.github.io">
         <input type="hidden" name="_captcha" value="false">
 
-        <button type="submit" id="c-submit">Enviar</button>
-        <p class="form-status" id="form-status" aria-live="polite" hidden>Enviando…</p>
-    </form>
+        <button type="submit" id="c-submit">Enviar mensaje</button>
+        <p class="form-status" id="form-status" aria-live="polite" hidden>Enviando...</p>
+      </form>
     </section>
 
-    <!-- === Modal de éxito de Sección Contáctame === -->
     <div id="thanks-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="thanks-title" aria-describedby="thanks-desc" hidden>
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-card" role="document">
-        <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">×</button>
-        <h3 id="thanks-title">¡Gracias por tu mensaje!</h3>
-        <p id="thanks-desc">Te responderé a la brevedad. Revisa tu correo por si necesitas confirmar el envío.</p>
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="document">
+        <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">x</button>
+        <h3 id="thanks-title">Gracias por tu mensaje</h3>
+        <p id="thanks-desc">Te respondere a la brevedad. Si no ves respuesta pronto, revisa spam o promociones.</p>
         <div class="modal-actions">
-        <button class="modal-ok" type="button" data-close="true">Aceptar</button>
+          <button class="modal-ok" type="button" data-close="true">Aceptar</button>
         </div>
-    </div>
+      </div>
     </div>
 
-    <section aria-labelledby="mapa-sitio">
-        <h2 id="mapa-sitio">Mapa rápido del sitio</h2>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/juegos-panamericanos.html">Panamericanos 2023</a></li>
-            <li><a href="/london-bike-rides.html">London Bike Rides</a></li>
-            <li><a href="/spotify.html">Top 200 Spotify</a></li>
-            <li><a href="/the-walking-dead-popularity.html">TWD Popularity</a></li>
-            <li><a href="/gasto-i+d.html">Costo I+D Chile</a></li>
-            <li><a href="/walmart-sales.html">Walmart Sales</a></li>
-            <li><a href="/pokemon-data.html">Pokemon Data</a></li>
-            <li><a href="/JAC.html">Air Traffic Chile (JAC)</a></li>
-            <li><a href="/accidentes-stgo.html">Accidentes Santiago</a></li>
-            <li><a href="/valor-casas-RM.html">Valor Casas Usadas RM</a></li>
-        </ul>
+    <section class="site-map" aria-labelledby="mapa-sitio">
+      <div class="section-heading section-heading-left">
+        <h2 id="mapa-sitio">Mapa rapido del sitio</h2>
+      </div>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/juegos-panamericanos.html">Panamericanos 2023</a></li>
+        <li><a href="/london-bike-rides.html">London Bike Rides</a></li>
+        <li><a href="/spotify.html">Top 200 Spotify</a></li>
+        <li><a href="/the-walking-dead-popularity.html">TWD Popularity</a></li>
+        <li><a href="/gasto-i+d.html">Gasto en I+D Chile</a></li>
+        <li><a href="/walmart-sales.html">Walmart Sales</a></li>
+        <li><a href="/pokemon-data.html">Pokemon Data</a></li>
+        <li><a href="/JAC.html">Air Traffic Chile (JAC)</a></li>
+        <li><a href="/accidentes-valpo.html">Accidentes Valparaiso</a></li>
+      </ul>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 - Andrés Crooker Estivales. Todos los derechos reservados.</p>
-    </footer>
-    
-    <script src="contact.js" defer></script>
-    <script src="script.js"></script>
+  <footer class="site-footer">
+    <p>© 2026 Andres Crooker Estivales. Portafolio personal y proyectos de analisis.</p>
+  </footer>
+
+  <script src="contact.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
