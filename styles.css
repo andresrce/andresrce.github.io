@@ -398,6 +398,7 @@ button[type="submit"]:hover,
 .detalle-proyecto-onecolumn {
   width: min(var(--content), calc(100% - 32px));
   margin-inline: auto;
+  margin-top: 28px;
 }
 
 .detalle-proyecto > h1,
