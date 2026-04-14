@@ -2,6 +2,7 @@
 
 /* 1) Orden maestro de proyectos (ajústalo a tus archivos reales) */
 const PROJECTS = [
+  { title: "Gasfiteria El Rincon", url: "gasfiteria-el-rincon.html" },
   { title: "London Bike Rides", url: "london-bike-rides.html" },
   { title: "Top 200 Spotify", url: "spotify.html" },
   { title: "The Walking Dead Popularity", url: "the-walking-dead-popularity.html" },

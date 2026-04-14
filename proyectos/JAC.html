@@ -7,19 +7,19 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WF4HSLH8');</script>
-    <!-- End Google Tag Manager --> 
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accidentes en Valparaiso | Analisis geoespacial 2023-2024</title>
-    <meta name="description" content="Analisis geoespacial y temporal de accidentes de transito en Valparaiso entre 2023 y 2024 con Python, GeoPandas y Folium.">
-    <link rel="canonical" href="https://andresrce.com/accidentes-valpo.html">
+    <title>Air Traffic Chile JAC | Analisis del trafico aereo 2024</title>
+    <meta name="description" content="Analisis del trafico aereo en Chile con datos de la JAC, revisando pasajeros, operaciones, rutas y record historico de 2024.">
+    <link rel="canonical" href="https://andresrce.com/proyectos/JAC.html">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Accidentes en Valparaiso | Andres Crooker">
-    <meta property="og:description" content="Estudio geoespacial de siniestros en Valparaiso con datos, mapas y analisis temporal.">
-    <meta property="og:url" content="https://andresrce.com/accidentes-valpo.html">
+    <meta property="og:title" content="Air Traffic Chile JAC | Andres Crooker">
+    <meta property="og:description" content="Analisis del mercado aereo chileno con foco en pasajeros, rutas y crecimiento del trafico en 2024.">
+    <meta property="og:url" content="https://andresrce.com/proyectos/JAC.html">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
@@ -29,42 +29,41 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="site-header project-header">
         <nav class="site-nav" aria-label="Proyecto">
-            <a class="brand" href="index.html">Andres Crooker</a>
+            <a class="brand" href="../index.html">Andres Crooker</a>
             <ul>
-                <li><a class="nav-pill" href="index.html">Inicio</a></li>
+                <li><a class="nav-pill" href="../index.html">Inicio</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Contenido detallado del proyecto -->
     <section class="detalle-proyecto-onecolumn">
-        <h1>Proyecto Data Science – Georeferenced Car Accidents</h1>
-          <p>
-            <strong>Hipótesis:</strong>
-            En Valparaíso, el aumento del parque automotor y la compleja geografía urbana podrían estar elevando la cantidad de accidentes de tránsito.
-            Busco entender cómo han cambiado los siniestros entre 2023 y 2024 y si existe relación con el crecimiento del número de vehículos.
+        <h1>¿2024 fue récord histórico en Chile? | Análisis JAC</h1>
+        <p>
+            <strong>Hipótesis:</strong> <em>2024 fue un año récord en Chile al menos en pasajeros transportados</em>, exploraré esta afirmación con data disponible de la JAC. 
+            Me interesa especialmente comprender esta dinámica por mi experiencia previa trabajando en <strong>JetSMART</strong> (aerolínea de ultra bajo costo en LATAM): 
+            ¿Qué balance entre tráfico nacional/internacional, estacionalidad y rutas explican el peak?
         </p>
 
         <div style="background:#f5f7fb;border:1px solid #e6e9f2;border-radius:12px;padding:16px 18px;margin:18px 0;">
             <p style="margin:0;line-height:1.6;">
-                <strong>Dato clave:</strong>
-                La Región de Valparaíso superó los <em>400.000 vehículos inscritos en 2024</em> (INE),
-                mientras que los siniestros en zonas urbanas han mostrado un incremento sostenido según reportes de CONASET.
+            Punto de partida: la <strong>Junta de Aeronáutica Civil (JAC)</strong> informó que 
+            <strong>2024 cerró con más de 28,2 millones de pasajeros</strong>, marcando un <strong>máximo histórico</strong> para Chile. 
+            <a href="https://www.jac.gob.cl/transporte-aereo-alcanzo-record-historico-con-mas-de-28-2-millones-de-pasajeros-en-2024/" target="_blank" rel="noopener noreferrer">Ver noticia oficial (20/01/2025)</a>.
             </p>
         </div>
 
         <h2>Qué voy a analizar</h2>
-         <ul>
-            <li>Tendencia de accidentes en Valparaíso: <strong>2023 vs 2024</strong>.</li>
-            <li>Comparación entre <strong>cantidad de vehículos</strong> y <strong>número de siniestros</strong>.</li>
-            <li>Distribución geográfica: puntos críticos, zonas de riesgo y patrones urbanos.</li>
-            <li>Tipos de siniestro: colisiones, atropellos, volcamientos.</li>
-            <li>Factores propios de la ciudad: topografía, turismo y congestión.</li>
+        <ul>
+            <li>Récord en <strong>pasajeros</strong> y comparaciones.</li>
+            <li>Evidencia de récord en <strong>vuelos/operaciones</strong> (total y por tipo).</li>
+            <li>Desglose <strong>nacional vs. internacional</strong>, meses y rutas.</li>
+            <li>Participación de JetSMART en el mercado, ingreso, Top rutas, entro otros .</li>
         </ul>
 
         <p>Notebook estara disponible en GitHub. Análisis adjunto con graficos importantes.</p>
 
-        <h2>Analisis General</h2>
+        <h2>Analisis General JAC</h2>
         <div style="
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -139,10 +138,13 @@
 
         <nav class="proj-pager" aria-label="Navegación entre proyectos"></nav>
     </section>
-    
-    <footer>
+  <a class="whatsapp-float" href="https://wa.me/?text=Hola%20Andres%2C%20quiero%20cotizar%20servicios%20de%20SEO%2C%20GA4%20o%20Google%20Ads" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <span aria-hidden="true">WA</span>
+  </a>
+
+  <footer class="site-footer">
         <p>© 2026 Andres Crooker Estivales. Todos los derechos reservados.</p>
     </footer>
-    <script src="pager.js" defer></script>
+    <script src="../pager.js" defer></script>
 </body>
 </html>
