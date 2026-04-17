@@ -298,6 +298,8 @@ button[type="submit"]:hover,
 #sobre-mi,
 #servicios,
 #proyectos,
+#blog,
+.services-index,
 .contact-section,
 .site-map,
 .detalle-proyecto,
@@ -356,12 +358,59 @@ button[type="submit"]:hover,
 
 .contenedor-servicios {
   display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.blog-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
+.blog-card {
+  min-width: 0;
+}
+
+.blog-link {
+  display: grid;
+  gap: 10px;
+  height: 100%;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  text-decoration: none;
+  box-shadow: 0 16px 40px rgba(16, 32, 51, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.blog-link:hover,
+.blog-link:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(15, 91, 216, 0.35);
+  box-shadow: 0 24px 60px rgba(16, 32, 51, 0.14);
+}
+
+.blog-link h2,
+.blog-link h3,
+.blog-link p {
+  margin: 0;
+}
+
+.blog-link h2 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: 0;
+}
+
+.blog-listing + .blog-grid,
+.services-index + .contenedor-servicios {
+  margin-top: 20px;
+}
+
 .servicio {
   display: grid;
+  grid-column: span 2;
   gap: 10px;
   min-width: 0;
   padding: 24px;
@@ -371,6 +420,14 @@ button[type="submit"]:hover,
   box-shadow: 0 16px 40px rgba(16, 32, 51, 0.08);
 }
 
+.contenedor-servicios .servicio:nth-last-child(2):nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.contenedor-servicios .servicio:nth-last-child(1):nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
 .service-link {
   display: grid;
   gap: 10px;
@@ -378,13 +435,21 @@ button[type="submit"]:hover,
   text-decoration: none;
 }
 
+.servicio h2,
 .servicio h3,
 .servicio p {
   margin: 0;
 }
 
+.servicio h2 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: 0;
+}
+
 .services-cta {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   margin-top: 28px;
 }
@@ -484,6 +549,71 @@ button[type="submit"]:hover,
 
 .service-hero h1 {
   max-width: 16ch;
+}
+
+.service-copy,
+.blog-article,
+.blog-listing {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid rgba(214, 223, 235, 0.9);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 36px rgba(16, 32, 51, 0.06);
+}
+
+.service-copy h2,
+.service-copy h3,
+.service-copy p,
+.service-copy ul,
+.blog-article h1,
+.blog-article h2,
+.blog-article h3,
+.blog-article p,
+.blog-article ul,
+.blog-listing h1,
+.blog-listing p {
+  margin-top: 0;
+}
+
+.service-copy ul,
+.blog-article ul {
+  padding-left: 20px;
+}
+
+.service-copy li + li,
+.blog-article li + li {
+  margin-top: 8px;
+}
+
+.blog-article {
+  max-width: 880px;
+}
+
+.blog-article h1 {
+  max-width: 18ch;
+}
+
+.article-meta {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.article-cta {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--accent-soft);
+}
+
+.article-cta p {
+  margin: 0;
 }
 
 .detalle-proyecto,
@@ -787,12 +917,19 @@ body.modal-open {
 
 @media (max-width: 980px) {
   .contenedor-servicios,
+  .blog-grid,
   .contenedor-proyectos,
   .contenido-proyecto,
   .sobre-mi-container,
   .project-results,
   .service-detail-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .servicio,
+  .contenedor-servicios .servicio:nth-last-child(2):nth-child(4),
+  .contenedor-servicios .servicio:nth-last-child(1):nth-child(5) {
+    grid-column: auto;
   }
 
   .proyecto-destacado,
@@ -812,6 +949,7 @@ body.modal-open {
   }
 
   .contenedor-servicios,
+  .blog-grid,
   .contenedor-proyectos,
   .contenido-proyecto,
   .sobre-mi-container,
@@ -852,6 +990,9 @@ body.modal-open {
   .sobre-mi-imagen,
   .contact-section,
   .site-map,
+  .service-copy,
+  .blog-article,
+  .blog-listing,
   .detalle-proyecto,
   .detalle-proyecto-onecolumn,
   .service-hero,

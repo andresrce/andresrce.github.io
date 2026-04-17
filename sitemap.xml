@@ -2,15 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://andresrce.com/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url><loc>https://andresrce.com/servicios/creacion-web.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://andresrce.com/servicios/seo-local.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://andresrce.com/servicios/ga4-data.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://andresrce.com/servicios/implementacion-google-ads.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://andresrce.com/servicios/servicio-mensual-ads.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/creacion-web.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/seo-local.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/ga4-data.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/implementacion-google-ads.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/servicios/servicio-mensual-ads.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/blog/</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://andresrce.com/blog/consultor-seo-vina-del-mar.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andresrce.com/blog/google-ads-negocios-locales.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andresrce.com/blog/implementar-ga4-conversiones.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andresrce.com/blog/creacion-web-negocio-local.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andresrce.com/blog/seo-local-vs-google-ads.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andresrce.com/blog/auditoria-seo-tecnica.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://andresrce.com/proyectos/gasfiteria-el-rincon.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://andresrce.com/proyectos/juegos-panamericanos.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://andresrce.com/proyectos/london-bike-rides.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
