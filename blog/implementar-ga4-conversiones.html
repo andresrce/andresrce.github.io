@@ -11,13 +11,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Implementar GA4 para medir conversiones y contactos</title>
-  <meta name="description" content="Guia para implementar GA4 en sitios de servicios: eventos de formularios, WhatsApp, llamadas, conversiones y lectura de canales.">
+  <meta name="description" content="Guía para implementar GA4 en sitios de servicios: eventos de formularios, WhatsApp, llamadas, conversiones y lectura de canales.">
   <link rel="canonical" href="https://andresrce.com/blog/implementar-ga4-conversiones.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="es_CL">
   <meta property="og:title" content="Implementar GA4 para medir contactos, llamadas y WhatsApp">
-  <meta property="og:description" content="Eventos y conversiones esenciales para evaluar SEO, Google Ads y paginas de servicio.">
+  <meta property="og:description" content="Eventos y conversiones esenciales para evaluar SEO, Google Ads y páginas de servicio.">
   <meta property="og:url" content="https://andresrce.com/blog/implementar-ga4-conversiones.html">
   <meta property="og:image" content="https://andresrce.com/images/index-cover.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
         "@type": "BlogPosting",
         "@id": "https://andresrce.com/blog/implementar-ga4-conversiones.html#article",
         "headline": "Implementar GA4 para medir contactos, llamadas y WhatsApp",
-        "description": "Guia para definir eventos y conversiones en sitios de servicios.",
+        "description": "Guía para definir eventos y conversiones en sitios de servicios.",
         "image": "https://andresrce.com/images/index-cover.png",
         "datePublished": "2026-04-17",
         "dateModified": "2026-04-17",
@@ -39,7 +39,7 @@
         "publisher": {"@id": "https://andresrce.com/#person"},
         "mainEntityOfPage": "https://andresrce.com/blog/implementar-ga4-conversiones.html"
       },
-      {"@type": "Person", "@id": "https://andresrce.com/#person", "name": "Andres Crooker Estivales", "url": "https://andresrce.com/"},
+      {"@type": "Person", "@id": "https://andresrce.com/#person", "name": "Andrés Crooker Estivales", "url": "https://andresrce.com/"},
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -51,12 +51,35 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué eventos debe medir un sitio de servicios?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Debe medir formularios, WhatsApp, llamadas, correo, cotizaciones, botones de contacto y visitas a páginas clave del proceso comercial."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia hay entre evento y conversión?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Un evento registra una interacción. Una conversión identifica una acción con valor comercial, como una solicitud de contacto o cotización."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué conectar GA4 con Google Ads?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Porque permite optimizar campañas con datos de contactos reales y comparar el rendimiento de anuncios, SEO y otras fuentes de tráfico."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF4HSLH8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="site-header project-header">
-    <nav class="site-nav" aria-label="Articulo">
-      <a class="brand" href="../index.html">Andres Crooker</a>
+    <nav class="site-nav" aria-label="Artículo">
+      <a class="brand" href="../index.html">Andrés Crooker</a>
       <ul>
         <li><a class="nav-pill" href="../index.html#servicios">Servicios</a></li>
         <li><a class="nav-pill" href="./">Blog</a></li>
@@ -69,41 +92,65 @@
     <article class="blog-article">
       <p class="section-kicker">GA4/Data</p>
       <h1>Implementar GA4 para medir contactos, llamadas y WhatsApp</h1>
-      <p class="article-meta">Publicado el 17 de abril de 2026 por Andres Crooker</p>
-      <p>Antes de evaluar SEO o Google Ads, un sitio de servicios necesita responder una pregunta simple: que acciones generan oportunidades reales? GA4 ayuda a ordenar esa lectura cuando los eventos estan definidos con criterio comercial.</p>
+      <p class="article-meta">Publicado el 17 de abril de 2026 por Andrés Crooker</p>
+      <section class="quick-summary" aria-labelledby="ga4-blog-summary-title">
+        <h2 id="ga4-blog-summary-title">TL;DR</h2>
+        <ul>
+          <li>Define eventos según valor comercial, no por cantidad de clics.</li>
+          <li>No todo evento debe marcarse como conversión.</li>
+          <li>GA4, GTM y Google Ads deben compartir nombres y criterios de medición.</li>
+        </ul>
+      </section>
+      <p>Antes de evaluar SEO o Google Ads, un sitio de servicios necesita responder una pregunta simple: ¿qué acciones generan oportunidades reales? GA4 ayuda a ordenar esa lectura cuando los eventos están definidos con criterio comercial.</p>
 
-      <h2>Eventos que deberia medir un negocio local</h2>
+      <h2>Eventos que debería medir un negocio local</h2>
       <ul>
-        <li>Envio correcto de formularios.</li>
+        <li>Envío correcto de formularios.</li>
         <li>Clics en botones de WhatsApp.</li>
-        <li>Clics en telefono, correo o enlaces de cotizacion.</li>
-        <li>Visitas a paginas de servicio de alta intencion.</li>
+        <li>Clics en teléfono, correo o enlaces de cotización.</li>
+        <li>Visitas a páginas de servicio de alta intención.</li>
         <li>Descargas o interacciones relevantes para el proceso comercial.</li>
       </ul>
 
-      <h2>No todo evento debe ser conversion</h2>
-      <p>Una conversion debe representar una accion con valor real. Un scroll o una visita puede servir para analizar comportamiento, pero normalmente no deberia mezclarse con solicitudes de contacto. Separar eventos informativos de conversiones evita tomar decisiones con datos inflados.</p>
+      <h2>No todo evento debe ser conversión</h2>
+      <p>Una conversión debe representar una acción con valor real. Un scroll o una visita puede servir para analizar comportamiento, pero normalmente no debería mezclarse con solicitudes de contacto. Separar eventos informativos de conversiones evita tomar decisiones con datos inflados.</p>
 
       <h2>GA4, Google Tag Manager y Ads deben conversar</h2>
-      <p>La implementacion ideal deja GA4, GTM y Google Ads alineados. Asi puedes importar conversiones, comparar canales, revisar paginas de destino y entender si una campana genera contactos o solo trafico.</p>
+      <p>La implementación ideal deja GA4, GTM y Google Ads alineados. Así puedes importar conversiones, comparar canales, revisar páginas de destino y entender si una campaña genera contactos o solo tráfico.</p>
 
-      <h2>Que revisar despues de implementar</h2>
-      <p>Conviene validar en tiempo real, probar formularios, revisar parametros, confirmar que no se dupliquen eventos y documentar nombres. Esa base evita perder semanas interpretando datos inconsistentes.</p>
+      <h2>Qué revisar después de implementar</h2>
+      <p>Conviene validar en tiempo real, probar formularios, revisar parámetros, confirmar que no se dupliquen eventos y documentar nombres. Esa base evita perder semanas interpretando datos inconsistentes.</p>
+
+      <section class="faq-block" aria-labelledby="ga4-blog-faq-title">
+        <h2 id="ga4-blog-faq-title">Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Qué eventos debe medir un sitio de servicios?</summary>
+          <p>Debe medir formularios, WhatsApp, llamadas, correo, cotizaciones, botones de contacto y visitas a páginas clave del proceso comercial.</p>
+        </details>
+        <details>
+          <summary>¿Qué diferencia hay entre evento y conversión?</summary>
+          <p>Un evento registra una interacción. Una conversión identifica una acción con valor comercial, como una solicitud de contacto o cotización.</p>
+        </details>
+        <details>
+          <summary>¿Por qué conectar GA4 con Google Ads?</summary>
+          <p>Porque permite optimizar campañas con datos de contactos reales y comparar el rendimiento de anuncios, SEO y otras fuentes de tráfico.</p>
+        </details>
+      </section>
 
       <div class="article-cta">
-        <h2>Quieres ordenar tu medicion?</h2>
-        <p>Puedo implementar eventos, conversiones y estructura GA4 para que SEO y Ads se evaluen con datos mas limpios.</p>
-        <a class="button-primary" href="../servicios/ga4-data.html">Ver implementacion GA4</a>
+        <h2>¿Quieres ordenar tu medición?</h2>
+        <p>Puedo implementar eventos, conversiones y estructura GA4 para que SEO y Ads se evalúen con datos más limpios.</p>
+        <a class="button-primary" href="../servicios/ga4-data.html">Ver implementación GA4</a>
       </div>
     </article>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/?text=Hola%20Andres%2C%20quiero%20cotizar%20servicios%20de%20SEO%2C%20GA4%20o%20Google%20Ads" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/56945967519?text=Hola%20Andr%C3%A9s%2C%20quiero%20cotizar%20servicios%20de%20SEO%2C%20GA4%20o%20Google%20Ads" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
     <img src="https://images.icon-icons.com/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
   </a>
 
   <footer class="site-footer">
-    <p>© 2026 Andres Crooker Estivales. Marketing digital, datos y performance.</p>
+    <p>© 2026 Andrés Crooker Estivales. Marketing digital, datos y performance.</p>
   </footer>
 </body>
 </html>

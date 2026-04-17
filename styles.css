@@ -200,18 +200,18 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
-  font-size: clamp(2.6rem, 6vw, 5.4rem);
-  letter-spacing: -0.05em;
+  max-width: 14ch;
+  font-size: clamp(2.1rem, 4.5vw, 4rem);
+  letter-spacing: -0.035em;
 }
 
 h2 {
-  font-size: clamp(1.9rem, 3vw, 3rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  letter-spacing: -0.025em;
 }
 
 h3 {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
 }
 
 p,
@@ -408,6 +408,11 @@ button[type="submit"]:hover,
   margin-top: 20px;
 }
 
+.blog-grid + .faq-block,
+.services-cta + .faq-block {
+  margin-top: 28px;
+}
+
 .servicio {
   display: grid;
   grid-column: span 2;
@@ -548,7 +553,8 @@ button[type="submit"]:hover,
 }
 
 .service-hero h1 {
-  max-width: 16ch;
+  max-width: 22ch;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
 }
 
 .service-copy,
@@ -593,7 +599,28 @@ button[type="submit"]:hover,
 }
 
 .blog-article h1 {
-  max-width: 18ch;
+  max-width: 24ch;
+  font-size: clamp(2rem, 3.8vw, 3.15rem);
+  letter-spacing: -0.03em;
+}
+
+.blog-listing h1,
+.services-index h1 {
+  max-width: 26ch;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  letter-spacing: -0.03em;
+}
+
+.blog-article h2,
+.service-copy h2,
+.article-cta h2 {
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+
+.service-detail-grid h2 {
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  letter-spacing: -0.01em;
 }
 
 .article-meta {
@@ -614,6 +641,50 @@ button[type="submit"]:hover,
 
 .article-cta p {
   margin: 0;
+}
+
+.quick-summary,
+.faq-block,
+.topic-links {
+  display: grid;
+  gap: 12px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: rgba(15, 91, 216, 0.06);
+}
+
+.quick-summary h2,
+.quick-summary h3,
+.faq-block h2,
+.topic-links h2 {
+  margin-bottom: 0;
+}
+
+.quick-summary ul,
+.topic-links ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.faq-block details {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-block details:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.faq-block summary {
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.faq-block p {
+  margin-bottom: 0;
 }
 
 .detalle-proyecto,
