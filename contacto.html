@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WF4HSLH8');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Andrés Crooker</title>
+  <meta name="description" content="Contacta a Andrés Crooker para SEO local, GA4, creación de sitios web y campañas de Google Ads para negocios locales.">
+  <link rel="canonical" href="https://andresrce.com/contacto.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="author" content="Andrés Crooker Estivales">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Portafolio Andrés Crooker">
+  <meta property="og:title" content="Contacto | Andrés Crooker">
+  <meta property="og:description" content="Escríbeme para conversar sobre SEO local, GA4, sitios web y Google Ads.">
+  <meta property="og:url" content="https://andresrce.com/contacto.html">
+  <meta property="og:image" content="https://andresrce.com/images/index-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://www.pngkey.com/png/full/989-9899089_bleach-logo-skull-logo-bleach-png.png">
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF4HSLH8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Principal">
+      <a class="brand" href="index.html">Andrés Crooker</a>
+      <ul>
+        <li><a class="nav-pill" href="index.html#inicio">Inicio</a></li>
+        <li><a class="nav-pill" href="index.html#servicios">Servicios</a></li>
+        <li><a class="nav-pill" href="blog/index.html">Blog</a></li>
+        <li><a class="nav-pill" href="index.html#proyectos">Proyectos</a></li>
+        <li><a class="nav-pill" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="contact-page">
+    <section class="contact-section" aria-labelledby="contacto-title">
+      <div class="section-heading section-heading-left">
+        <p class="section-kicker">Contacto</p>
+        <h1 id="contacto-title">Conversemos</h1>
+        <p>Si quieres mejorar tu SEO local, ordenar GA4, crear una web o lanzar campañas de Google Ads, puedes escribirme aquí.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwpwdqyb" method="POST" novalidate>
+        <div class="field">
+          <label for="c-nombre">Nombre</label>
+          <input id="c-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="c-mensaje">Mensaje</label>
+          <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuéntame brevemente tu necesidad" required></textarea>
+        </div>
+
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde andresrce.com">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" id="c-submit">Enviar mensaje</button>
+        <p class="form-status" id="form-status" aria-live="polite" hidden>Enviando...</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="thanks-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="thanks-title" aria-describedby="thanks-desc" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">x</button>
+      <h3 id="thanks-title">Gracias por tu mensaje</h3>
+      <p id="thanks-desc">Te responderé a la brevedad. Si no ves respuesta pronto, revisa spam o promociones.</p>
+      <div class="modal-actions">
+        <button class="modal-ok" type="button" data-close="true">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/56945967519?text=Hola%20Andr%C3%A9s%2C%20quiero%20cotizar%20servicios%20de%20SEO%2C%20GA4%20o%20Google%20Ads" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <img src="https://images.icon-icons.com/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  </a>
+
+  <footer class="site-footer">
+    <p>© 2026 Andrés Crooker Estivales. Marketing digital, datos y performance.</p>
+  </footer>
+
+  <script src="contact.js" defer></script>
+</body>
+</html>
